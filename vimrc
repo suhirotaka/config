@@ -12,13 +12,14 @@ autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
 
-" Disable to comment out automatically
+" コメント行を自動挿入しない
 augroup auto_comment_off
-    autocmd!
-    autocmd BufEnter * setlocal formatoptions-=r
-    autocmd BufEnter * setlocal formatoptions-=o
+  autocmd!
+  autocmd BufEnter * setlocal formatoptions-=r
+  autocmd BufEnter * setlocal formatoptions-=o
 augroup END
 
+" 前回カーソルのあった行を記憶する
 if has("autocmd")
   augroup redhat
     " In text files, always limit the width of text to 78 characters
@@ -29,4 +30,21 @@ if has("autocmd")
     \   exe "normal! g'\"" |
     \ endif
   augroup END
+endif
+
+" ペースト時はインデントしない
+if &term =~ "xterm"
+  let &t_ti .= "\e[?2004h"
+  let &t_te .= "\e[?2004l"
+  let &pastetoggle = "\e[201~"
+
+  function XTermPasteBegin(ret)
+    set paste
+    return a:ret
+  endfunction
+
+  noremap <special> <expr> <Esc>[200~ XTermPasteBegin("0i")
+  inoremap <special> <expr> <Esc>[200~ XTermPasteBegin("")
+  cnoremap <special> <Esc>[200~ <nop>
+  cnoremap <special> <Esc>[201~ <nop>
 endif
