@@ -1,6 +1,9 @@
-alias vi='vim -o'
-alias ll='ls -la'
+alias vi='/usr/local/Cellar/vim/8.0.0054/bin/vim -o'
+alias vim='/usr/local/Cellar/vim/8.0.0054/bin/vim -o'
+alias ll='ls -l'
 alias la='ls -la'
+alias l.='ls -d .*'
+alias ll.='ls -ld .*'
 
 set -o vi
 
