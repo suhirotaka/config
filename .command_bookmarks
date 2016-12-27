@@ -1,0 +1,5 @@
+docker-compose run back rails runner Tasks::DoctorOperation.createTestDoctor --first_name=test --last_name=suzuki --email=test@example.com --password=12345678 --is_staff=true
+psql -h whytlinkdev-import.coug1kx7krav.ap-northeast-1.rds.amazonaws.com -U whytlinkadmin -d whytlinkstg
+docker stop $(docker ps --filter name=whyt* -q)
+rails runner Tasks::DoctorOperation.createTestDoctor --first_name=りんく1 --last_name=ほわいと --email=wl-testuser-1@reasonwhy.jp --password=12345678 --is_staff=false
+docker-compose run back rake db:migrate VERSION=20160823014513 RAILS_ENV=production SECRET_KEY_BASE=3ad20c9f90cb19d487e0130a2d58529de42aa77406113eeb0c1b3c11a0beb112c4b497acd68ddbc083c69a2135bc76828d7d7674fb4d0b4c87be7cd4145401c9
