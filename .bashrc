@@ -1,5 +1,5 @@
-alias vi='/usr/local/Cellar/vim/8.0.0054/bin/vim -o'
-alias vim='/usr/local/Cellar/vim/8.0.0054/bin/vim -o'
+alias vi='vim -o'
+alias vim='vim -o'
 alias ll='ls -l'
 alias la='ls -la'
 alias l.='ls -d .*'
