@@ -44,6 +44,7 @@ set expandtab
 set shiftwidth=2
 set hls
 set ic
+set nonumber
 filetype plugin indent on
 
 autocmd FileType python setl autoindent
