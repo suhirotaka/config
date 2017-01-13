@@ -1,0 +1,3 @@
+docker stop $(docker ps --filter name=wh* --format "{{.Names}}")
+sudo arp-scan --localnet
+ecslogin -d -c default api-production-web
