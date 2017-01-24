@@ -1,3 +1,4 @@
 docker stop $(docker ps --filter name=wh* --format "{{.Names}}")
 sudo arp-scan --localnet
 ecslogin -d -c default api-production-web
+git commit --allow-empty -m __DEPLOY_TO_PRODUCTION__
