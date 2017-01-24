@@ -16,4 +16,5 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 
 source ~/.git-completion.bash
+source ~/.git-prompt.sh
 source ~/.nvm/nvm.sh

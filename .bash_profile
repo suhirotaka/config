@@ -1,4 +1,4 @@
-export PS1='\w $ '
+export PS1='\w$(__git_ps1 ":%s") $ '
 export CLICOLOR=1
 export LSCOLORS=gxfxcxdxbxegedabagacad
 export LANG=ja_JP.UTF-8
