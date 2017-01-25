@@ -3,10 +3,6 @@ export LSCOLORS=gxfxcxdxbxegedabagacad
 export LANG=ja_JP.UTF-8
 export LESSCHARSET=utf-8
 
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
-
 test -r /sw/bin/init.sh && . /sw/bin/init.sh
 
 function set_prompt {
@@ -19,3 +15,7 @@ function set_prompt {
   export PS1="${MAGENTA}\w${CYAN}${git_branch} ${DEFAULT}$ "
 }
 set_prompt
+
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi

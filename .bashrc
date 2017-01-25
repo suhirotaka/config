@@ -9,11 +9,11 @@ alias dockerc='docker-compose'
 set -o vi
 
 export PATH="$HOME/bin:$PATH"
-
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
+export NODE_PATH=$(npm root -g)
 
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
