@@ -15,6 +15,7 @@ function set_prompt {
   local CYAN="\[\e[1;36m\]"
   local LMAGENTA="\[\e[1;95m\]"
   local LCYAN="\[\e[1;96m\]"
-  export PS1="${MAGENTA}\w${CYAN}$(__git_ps1 ":%s") ${DEFAULT}$ "
+  local git_branch='$(__git_ps1 ":%s")'
+  export PS1="${MAGENTA}\w${CYAN}${git_branch} ${DEFAULT}$ "
 }
 set_prompt
