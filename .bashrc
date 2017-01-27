@@ -4,7 +4,7 @@ alias ll='ls -l'
 alias la='ls -la'
 alias l.='ls -d .*'
 alias ll.='ls -ld .*'
-alias dockerc='docker-compose'
+alias dkrc='docker-compose'
 
 set -o vi
 
