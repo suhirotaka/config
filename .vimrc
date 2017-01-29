@@ -14,10 +14,15 @@ call dein#begin('/Users/suhirotaka/.cache/dein')
 call dein#add('Shougo/dein.vim')
 
 " Add or remove your plugins here:
-call dein#add('Shougo/neosnippet.vim')
-call dein#add('Shougo/neosnippet-snippets')
-call dein#add('kannokanno/previm')
-call dein#add('tyru/open-browser.vim')
+" call dein#add('Shougo/neosnippet.vim')
+" call dein#add('Shougo/neosnippet-snippets')
+" call dein#add('kannokanno/previm')
+" call dein#add('tyru/open-browser.vim')
+" call dein#add('godlygeek/tabular')
+" call dein#add('plasticboy/vim-markdown')
+" call dein#add('tpope/vim-markdown')
+call dein#add('othree/yajs.vim') " For ES6 syntax highlight
+
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
@@ -30,9 +35,9 @@ filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-"if dein#check_install()
-"  call dein#install()
-"endif
+if dein#check_install()
+  call dein#install()
+endif
 
 "End dein Scripts-------------------------
 
