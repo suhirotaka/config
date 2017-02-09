@@ -22,6 +22,7 @@ call dein#add('Shougo/dein.vim')
 " call dein#add('plasticboy/vim-markdown')
 " call dein#add('tpope/vim-markdown')
 call dein#add('othree/yajs.vim') " For ES6 syntax highlight
+call dein#add('tpope/vim-fugitive') " For inner git operation
 
 
 " You can specify revision/branch/tag.
