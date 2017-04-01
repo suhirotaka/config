@@ -1,6 +1,6 @@
-"dein Scripts-----------------------------
+"Start dein Scripts-----------------------------
 if &compatible
-  set nocompatible               " Be iMproved
+  set nocompatible " Be iMproved
 endif
 
 " Required:
@@ -25,7 +25,6 @@ call dein#add('othree/yajs.vim') " ES6 syntax highlight
 call dein#add('tpope/vim-fugitive') " inner git operation
 call dein#add('derekwyatt/vim-scala') " scala syntax highlight
 
-
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
@@ -43,8 +42,9 @@ endif
 
 "End dein Scripts-------------------------
 
-syntax on
 
+" default preference
+syntax on
 set history=100
 set number
 set expandtab
@@ -54,6 +54,7 @@ set ic
 set nonumber
 filetype plugin indent on
 
+" python indent
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
