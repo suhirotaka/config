@@ -21,8 +21,9 @@ call dein#add('Shougo/dein.vim')
 " call dein#add('godlygeek/tabular')
 " call dein#add('plasticboy/vim-markdown')
 " call dein#add('tpope/vim-markdown')
-call dein#add('othree/yajs.vim') " For ES6 syntax highlight
-call dein#add('tpope/vim-fugitive') " For inner git operation
+call dein#add('othree/yajs.vim') " ES6 syntax highlight
+call dein#add('tpope/vim-fugitive') " inner git operation
+call dein#add('derekwyatt/vim-scala') " scala syntax highlight
 
 
 " You can specify revision/branch/tag.
@@ -99,3 +100,6 @@ augroup PrevimSettings
   autocmd!
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
+
+" scalaが拡張子のファイルはファイルタイプをscalaとして読みこむ
+au BufNewFile,BufRead *.scala setf scala
