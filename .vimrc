@@ -105,3 +105,6 @@ augroup END
 
 " scalaが拡張子のファイルはファイルタイプをscalaとして読みこむ
 au BufNewFile,BufRead *.scala setf scala
+
+" ビープ音を無効にする
+set visualbell t_vb=
