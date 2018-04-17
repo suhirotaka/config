@@ -25,6 +25,7 @@ call dein#add('othree/yajs.vim') " ES6 syntax highlight
 call dein#add('tpope/vim-fugitive') " inner git operation
 call dein#add('derekwyatt/vim-scala') " scala syntax highlight
 call dein#add('slim-template/vim-slim') " slim syntax highlight
+call dein#add('cohama/lexima.vim') " auto close parentheses
 
 " You can specify revision/branch/tag.
 call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
