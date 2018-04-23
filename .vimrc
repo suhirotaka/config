@@ -109,3 +109,6 @@ au BufNewFile,BufRead *.scala setf scala
 
 " ビープ音を無効にする
 set visualbell t_vb=
+
+" custom key mappings
+inoremap <silent> jj <ESC>
