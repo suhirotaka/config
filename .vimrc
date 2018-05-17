@@ -1,49 +1,45 @@
-"Start dein Scripts-----------------------------
+"dein Scripts-----------------------------
 if &compatible
-  set nocompatible " Be iMproved
+  set nocompatible               " Be iMproved
 endif
 
 " Required:
-set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
+set runtimepath+=/Users/hirotaka.suzuki/.cache/dein/repos/github.com/Shougo/dein.vim
 
 " Required:
-call dein#begin('/Users/suhirotaka/.cache/dein')
+if dein#load_state('/Users/hirotaka.suzuki/.cache/dein')
+  call dein#begin('/Users/hirotaka.suzuki/.cache/dein')
 
-" Let dein manage dein
-" Required:
-call dein#add('Shougo/dein.vim')
+  " Let dein manage dein
+  " Required:
+  call dein#add('/Users/hirotaka.suzuki/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-" Add or remove your plugins here:
-" call dein#add('Shougo/neosnippet.vim')
-" call dein#add('Shougo/neosnippet-snippets')
-" call dein#add('kannokanno/previm')
-" call dein#add('tyru/open-browser.vim')
-" call dein#add('godlygeek/tabular')
-" call dein#add('plasticboy/vim-markdown')
-" call dein#add('tpope/vim-markdown')
-call dein#add('othree/yajs.vim') " ES6 syntax highlight
-call dein#add('tpope/vim-fugitive') " inner git operation
-call dein#add('derekwyatt/vim-scala') " scala syntax highlight
-call dein#add('slim-template/vim-slim') " slim syntax highlight
-call dein#add('cohama/lexima.vim') " auto close parentheses
+  " Add or remove your plugins here:
+  call dein#add('othree/yajs.vim') " ES6 syntax highlight
+  call dein#add('tpope/vim-fugitive') " inner git operation
+  call dein#add('derekwyatt/vim-scala') " scala syntax highlight
+  call dein#add('slim-template/vim-slim') " slim syntax highlight
+  call dein#add('cohama/lexima.vim') " auto close parentheses
 
-" You can specify revision/branch/tag.
-call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
+  " You can specify revision/branch/tag.
+  "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+  call dein#add('Shougo/vimshell', { 'rev': '3787e5' })
 
-" Required:
-call dein#end()
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
 " Required:
 filetype plugin indent on
 syntax enable
 
 " If you want to install not installed plugins on startup.
-if dein#check_install()
-  call dein#install()
-endif
+"if dein#check_install()
+"  call dein#install()
+"endif
 
 "End dein Scripts-------------------------
-
 
 " default preference
 syntax on
