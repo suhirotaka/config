@@ -51,13 +51,15 @@ set shiftwidth=2
 set hls
 set ic
 set nonumber
-set tabstop=4
 filetype plugin indent on
 
 " python indent
 autocmd FileType python setl autoindent
 autocmd FileType python setl smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 autocmd FileType python setl tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+" golang indent
+autocmd FileType go setl tabstop=4 shiftwidth=4 softtabstop=0
 
 " コメント行を自動挿入しない
 augroup auto_comment_off
@@ -102,10 +104,10 @@ augroup PrevimSettings
   autocmd BufNewFile,BufRead *.{md,mdwn,mkd,mkdn,mark*} set filetype=markdown
 augroup END
 
-" scalaが拡張子のファイルはファイルタイプをscalaとして読みこむ
+" scala filetype
 au BufNewFile,BufRead *.scala setf scala
 
-" ビープ音を無効にする
+" disable beep
 set visualbell t_vb=
 
 " custom key mappings
