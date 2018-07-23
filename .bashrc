@@ -18,3 +18,4 @@ export NODE_PATH=$(npm root -g)
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
 source ~/.nvm/nvm.sh
+[[ -s "/Users/hirotaka.suzuki/.gvm/scripts/gvm" ]] && source "/Users/hirotaka.suzuki/.gvm/scripts/gvm"
