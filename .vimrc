@@ -15,11 +15,12 @@ if dein#load_state('/Users/hirotaka.suzuki/.cache/dein')
   call dein#add('/Users/hirotaka.suzuki/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   " Add or remove your plugins here:
-  call dein#add('othree/yajs.vim') " ES6 syntax highlight
-  call dein#add('tpope/vim-fugitive') " inner git operation
-  call dein#add('derekwyatt/vim-scala') " scala syntax highlight
-  call dein#add('slim-template/vim-slim') " slim syntax highlight
+  call dein#add('othree/yajs.vim') " ES6
+  call dein#add('tpope/vim-fugitive') " git operation
+  call dein#add('derekwyatt/vim-scala') " scala
+  call dein#add('slim-template/vim-slim') " slim
   call dein#add('cohama/lexima.vim') " auto close parentheses
+  call dein#add('fatih/vim-go') " golang
 
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
@@ -50,6 +51,7 @@ set shiftwidth=2
 set hls
 set ic
 set nonumber
+set tabstop=4
 filetype plugin indent on
 
 " python indent
