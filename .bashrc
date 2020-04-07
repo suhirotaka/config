@@ -14,6 +14,11 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 export NODE_PATH=$(npm root -g)
+export GOENV_ROOT="$HOME/.goenv"
+export PATH="$GOENV_ROOT/bin:$PATH"
+export PATH="$GOROOT/bin:$PATH"
+export PATH="$PATH:$GOPATH/bin"
+eval "$(goenv init -)"
 
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
