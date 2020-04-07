@@ -21,6 +21,7 @@ if dein#load_state('/Users/hirotaka.suzuki/.cache/dein')
   call dein#add('slim-template/vim-slim') " slim
   call dein#add('cohama/lexima.vim') " auto close parentheses
   call dein#add('fatih/vim-go') " golang
+  call dein#add('posva/vim-vue') " Vue.js
 
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
