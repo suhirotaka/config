@@ -110,6 +110,7 @@ au BufNewFile,BufRead *.scala setf scala
 
 " disable beep
 set visualbell t_vb=
+set belloff=all
 
 " custom key mappings
 inoremap <silent> jj <ESC>
